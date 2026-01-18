@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace ConsoleApp1
+{
+    public class Game
+    {//1. feladat:
+        public string Platform { get; set; }
+        public string Played { get; set; }
+        public string Name { get; set; }
+        public int OpenCritic { get; set; }
+        public string Genre { get; set; }
+        public string Multiplayer { get; set; }
+        public string Source { get; set; }
+
+        //Szöveggé alakító függvény
+        public override string ToString()
+        {
+            return $"{Platform} {Played} {OpenCritic}{Multiplayer}{Name}";
+        }
+
+
+    }
+    //2. feladat:
+    public class GameStore //osztály létrehozása 
+    {
+        //Lista létrehozása
+                private List<Game> games = new List<Game>();
+        //A munkás konstruktor megnevezése
+        //Ez mondja meg, hogy ez a GameStore indító kódja, és vár egy fájlnevet
+        public GameStore(string ps_extra_games_input ) 
+        {
+        using (StreamReader) sr = new StreamReader(ps_extra_games_input, Encoding.Default))
+        
+        }
+
+   
+    }
+
+
+}
